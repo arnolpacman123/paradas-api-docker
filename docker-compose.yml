@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: arnolguevara21
+      POSTGRES_PASSWORD: aspirine
+      POSTGRES_DB: canales_de_transporte_db
+    container_name: db
+    restart: always
